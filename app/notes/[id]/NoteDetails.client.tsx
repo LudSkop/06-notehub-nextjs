@@ -19,7 +19,7 @@ export default function NoteDetailsClient({ id }: Props) {
   });
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error</p>;
+  if (error) return <p>Something went wrong.</p>;
   if (!note) return <p>No data</p>;
 
   return (
