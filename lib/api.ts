@@ -47,3 +47,11 @@ export const deleteNote = async (id: string): Promise<Note> => {
   });
   return response.data;
 };
+
+export const fetchNoteById = async (id: string) => {
+  const res = await axios.get<Note>(`${BASE_URL}/${id}`, {
+    headers: authHeader,
+  });
+
+  return res.data;
+};
